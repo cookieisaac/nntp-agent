@@ -1,4 +1,4 @@
-#NNTP Agent
+# NNTP Agent
 
 A flexible news collection agent based on NNTP protocol
 
@@ -11,3 +11,6 @@ server = nntplib.NNTP("news-archive.icm.edu.pl")
 server.list()
 server.group('junk')
 ```
+
+## Todo
+UML
