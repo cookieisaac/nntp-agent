@@ -2,6 +2,12 @@
 
 A flexible news collection agent based on NNTP protocol
 
+## Usage
+
+```
+python newsagent.py
+```
+
 ## Core Code
 
 ```python
@@ -12,9 +18,9 @@ server.list()
 server.group('gmane.comp.python.committers')
 ```
 
-## How to Merge Conflict
+## Bonus: Git Merge Conflict
 
-Q: Why I cannot push my code?
+### Q: Why I cannot push my code?
 ```
 # git push origin master
 Username for 'https://github.com': cookieisaac
@@ -29,7 +35,7 @@ hint: 'git pull') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 ```
-A: As described [here](http://stackoverflow.com/a/10298391/3806343),  the message tells you,
+**A**: As described [here](http://stackoverflow.com/a/10298391/3806343),  the message tells you,
 
 Merge the remote changes (e.g. 'git pull')
 Use git pull to pull the latest changes from the remote repository to your local repository. In this case, pulling changes will require a merge because you have made changes to your local repository.
@@ -55,10 +61,10 @@ After completing the merge, you will now be allowed to fast-forward origin/branc
 Git requires that you handle merges yourself, because a merge may lead to conflicts.
 
 
-Q:I made a few changes on Github and then I made a few change in local. How do I push my local change to a updated Github?
+### Q:I made a few changes on Github and then I made a few change in local. How do I push my local change to a updated Github?
 
 
-A: As suggested [here](https://githowto.com/resolving_conflicts), open the conlicted file, manually resolve the following part
+**A**: As suggested [here](https://githowto.com/resolving_conflicts), open the conlicted file, manually resolve the following part
 
 ```
 <<<<HEAD
@@ -80,30 +86,31 @@ git add lib/hello.html
 git commit -m "Merged master fixed conflict."
 ```
 
-Q: What if I got the following message?
+### Q: What if I got the following message?
 ```
 You have not concluded your merge (MERGE_HEAD exists).
 Please, commit your changes before you can merge.
 ```
 
-A: As illustrated [here](http://stackoverflow.com/a/11647899/3806343)
+**A**: As illustrated [here](http://stackoverflow.com/a/11647899/3806343)
 
 If your previous pull failed to merge automatically and went to conflict state. And the conflict wasn't resolved properly before the next pull.
 
-1)Undo the merge and pull again.
+1. Undo the merge and pull again.
 
-To undo a merge:
+	To undo a merge:
 
-`git merge --abort` [Since git version 1.7.4]
+	`git merge --abort` [Since git version 1.7.4]
 
-`git reset --merge` [prior git versions]
+	`git reset --merge` [prior git versions]
 
-2) Resolve the conflict.
+2. Resolve the conflict.
 
-3) Don't forget to add and commit the merge.
+3. Don't forget to add and commit the merge.
 
-4) git pull now should work fine.
+4. git pull now should work fine.
 
 
 ## Todo
-UML
+1. UML
+2. Test the regular expression for extrating news title and body from html
