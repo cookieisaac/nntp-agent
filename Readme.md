@@ -7,7 +7,7 @@ A flexible news collection agent based on NNTP protocol
 ```python
 import nntplib
 #Get a free server from http://www.freeusenetnews.com/
-server = nntplib.NNTP("news-archive.icm.edu.pl")
+server = nntplib.NNTP("news.gmane.org")
 server.list()
-server.group('junk')
+server.group('gmane.comp.python.committers')
 ```
